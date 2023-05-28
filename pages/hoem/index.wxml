@@ -1,0 +1,36 @@
+<!--pages/hoem/index.wxml-->
+<view class="header text-sm">
+  <view class="bg">
+    <image src="/static/images/bg.jpeg" mode="aspectFill"/>
+  </view>
+  <view class="flex p-m gap-m items-center">
+    <van-image round width="100" height="100" src="https://img.yzcdn.cn/vant/cat.jpeg" />
+    <view style="flex:1;">
+      <view class="flex justify-between text-xl">
+        <text>薛慧</text>
+        <van-icon name="close" />
+      </view>
+      <view class="flex justify-between">
+          <text class="school px-m">托普学院</text>
+          <view>
+            <van-icon name="bulb-o" />
+            未识别
+          </view>
+      </view>
+      <view class="flex gap-m">
+        <view class="flex">
+          <view>
+            0
+          </view>
+          <text>代办事项</text>
+        </view>
+        <view class="flex">
+          <view>
+            <van-icon name="scan" />
+          </view>
+          <text>立即扫码</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

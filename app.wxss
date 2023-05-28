@@ -1,0 +1,60 @@
+/**app.wxss**/
+page{
+  --primary-color:#187ef9;
+  --page-bg:#f3f5f7;
+  background-color: var(--page-bg);
+}
+.p-m{
+  padding: 15px;
+}
+.pl-m{
+  padding-left: 15px;
+}
+.pt-m{
+  padding-top: 15px;
+}
+.pb-m{
+  padding-bottom: 15px;
+}
+.pr-m{
+  padding-right: 15px;
+}
+.px-m{
+  padding: 0 15px;
+}
+.py-m{
+  padding: 15px 0;
+}
+.grid{
+  display: grid;
+}
+.flex{
+  display: flex;
+}
+.gap-m{
+  gap: 15px;
+}
+.items-center{
+  align-items: center;
+}
+.justify-center{
+  justify-content: center;
+}
+.justify-around{
+  justify-content: space-around;
+}
+.justify-between{
+  justify-content: space-between;
+}
+.text-sm{
+  font-size: small;
+}
+.text-md{
+  font-size: medium;
+}
+.text-xl{
+  font-size: x-large;
+}
+.text-2xl{
+  font-size: xx-large;
+}
