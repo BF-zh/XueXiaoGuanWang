@@ -1,0 +1,66 @@
+/* pages/hoem/index.wxss */
+.header{
+  --text-color:#fff;
+  --header-h:400rpx;
+  height: var(--header-h);
+  color: var(--text-color);
+}
+.bg {
+  position: absolute;
+  --mask-h: 30px;
+  z-index: -1;
+  height: var(--header-h);
+  width: 100%;
+  background: var(--primary-color);
+}
+.bg::after {
+  content: '';
+  left: 0;
+  top: 0;
+  position: absolute;
+  background: inherit;
+  opacity: .2;
+  width: 100%;
+  height: 100%;
+}
+
+.bg::before {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  width: 100%;
+  height: var(--mask-h);
+  background: var(--page-bg);
+  border-radius: var(--mask-h) var(--mask-h) 0 0;
+}
+.bg image {
+
+  width: 100%;
+  height: 100%;
+  opacity: .3;
+}
+.sign-auth{
+  margin-right: -15px;
+  color: var(--primary-color);
+  background: var(--page-bg);
+  border-radius: 1em 0 0 1em;
+}
+.school{
+  border: 1px solid var(--text-color);
+  border-radius: 1em;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+.text-icon{
+  --size: 2em;
+  width: var(--size);
+  height: var(--size);
+  line-height: var(--size);
+  border-radius: calc(var(--size) / 4);
+  text-align: center;
+  background: #7fade5;
+}
+.content-class{
+  border-radius: 15px;
+}

@@ -1,0 +1,8 @@
+/* pages/mine/index.wxss */
+.bg{
+  --radius:15px;
+  --h:300rpx;
+  background: var(--primary-color);
+  height: 300rpx;
+  border-radius: 0 0 var(--radius) var(--radius);
+}

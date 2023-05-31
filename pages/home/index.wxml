@@ -1,0 +1,57 @@
+<!--pages/hoem/index.wxml-->
+<view class="header text-sm">
+  <view class="bg">
+    <image src="/static/images/bg.jpeg" mode="aspectFill"/>
+  </view>
+  <view class="flex p-m gap-m items-center">
+    <van-image round width="100" height="100" src="https://img.yzcdn.cn/vant/cat.jpeg" />
+    <view style="flex:1;">
+      <view class="flex justify-between text-xl">
+        <text>北风</text>
+        <van-icon name="envelop-o" />
+      </view>
+      <view class="flex justify-between" style="margin: 15px 0;">
+          <text class="school px-m">托普学院</text>
+          <view class="sign-auth flex gap-sm items-center px-m">
+            <van-icon name="bulb-o" dot />
+            未识别
+          </view>
+      </view>
+      <view class="flex gap-m">
+        <view class="flex items-center gap-sm">
+          <view class="text-icon">
+            0
+          </view>
+          <text>代办事项</text>
+        </view>
+        <view class="flex items-center gap-sm">
+          <view class="text-icon">
+            <van-icon name="scan" />
+          </view>
+          <text>立即扫码</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<!-- <van-cell-group inset>
+  <van-grid border="{{false}}">
+    <van-grid-item style="--c:#187ef9;" icon-class="my-icon" icon-prefix="icon" icon="check-in" text="新生报到" />
+    <van-grid-item style="--c:#ff5e5e;" icon-class="my-icon" icon="refund-o" text="学费" />
+    <van-grid-item style="--c:#ff9a4c" icon-class="my-icon" icon="paid" text="继教" />
+    <van-grid-item style="--c:#57bf7f" icon-class="my-icon" icon-prefix="icon" icon="xueshengluqu" text="我的录取" />
+  </van-grid>
+</van-cell-group>
+<van-cell-group inset title="常用推荐">
+  <van-grid gutter="10">
+    <van-grid-item icon-class="my-icon" icon-prefix="icon" icon="gangbi" text="我的单招" />
+    <van-grid-item icon-class="my-icon" icon-prefix="icon" icon="ziliaoku" text="完善资料" />
+    <van-grid-item icon-class="my-icon" icon="gem-o" text="勤工俭学" />
+    <van-grid-item icon-class="my-icon" icon="more-o" text="杂费" />
+  </van-grid>
+</van-cell-group> -->
+<van-cell-group wx:for="{{list}}" wx:key="index" title="{{item.title}}" inset="{{item.inset}}">
+  <van-grid custom-class="gird-warp" border="{{false}}" gutter="{{item.gutter}}">
+    <van-grid-item wx:for="{{item.item}}" wx:key="index" style="--c:{{item.color}}" icon-class="my-icon" icon-prefix="{{item.prefix?'icon':'van-icon'}}" icon="{{item.icon}}" text="{{item.text}}" />
+  </van-grid>
+</van-cell-group>
