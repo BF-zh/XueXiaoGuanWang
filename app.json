@@ -1,13 +1,35 @@
 {
   "pages":[
-    "pages/hoem/index"
+    "pages/home/index",
+    "pages/manage/index",
+    "pages/mine/index"
   ],
+  "tabBar": {
+    "custom": true,
+    "color": "#000000",
+    "selectedColor": "#000000",
+    "backgroundColor": "#000000",
+    "list": [{
+        "pagePath": "pages/home/index"
+      },
+      {
+        "pagePath": "pages/manage/index"
+      },
+      {
+        "pagePath": "pages/mine/index"
+      }
+    ]
+  },
   "usingComponents": {
     "van-image": "@vant/weapp/image/index",
     "van-grid": "@vant/weapp/grid/index",
     "van-grid-item": "@vant/weapp/grid-item/index",
     "van-icon": "@vant/weapp/icon/index",
-    "van-button": "@vant/weapp/button/index"
+    "van-button": "@vant/weapp/button/index",
+    "van-cell": "@vant/weapp/cell/index",
+    "van-cell-group": "@vant/weapp/cell-group/index",
+    "van-tabbar": "@vant/weapp/tabbar/index",
+    "van-tabbar-item": "@vant/weapp/tabbar-item/index"
   },
   "window":{
     "backgroundTextStyle":"light",

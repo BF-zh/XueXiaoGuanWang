@@ -1,8 +1,12 @@
 /**app.wxss**/
+@import 'static/font/iconfont.wxss';
+
 page{
   --primary-color:#187ef9;
   --page-bg:#f3f5f7;
+  --content-bg:#fff;
   background-color: var(--page-bg);
+  padding-bottom: 85px;
 }
 .p-m{
   padding: 15px;
@@ -34,6 +38,9 @@ page{
 .gap-m{
   gap: 15px;
 }
+.gap-sm{
+  gap: 7px;
+}
 .items-center{
   align-items: center;
 }
@@ -57,4 +64,23 @@ page{
 }
 .text-2xl{
   font-size: xx-large;
+}
+.my-icon{
+  position: relative;
+  color: var(--c);
+}
+.my-icon::after{
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background: var(--c);
+  border-radius: 50%;
+  opacity: .1;
+  width: 1.5em;
+  height: 1.5em;
+  transform: translate(-50%,-50%);
+}
+.gird-warp{
+  background: var(--content-bg);
 }
