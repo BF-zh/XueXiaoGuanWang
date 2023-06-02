@@ -2,7 +2,9 @@
   "pages":[
     "pages/home/index",
     "pages/manage/index",
-    "pages/mine/index"
+    "pages/mine/index",
+    "pages/fee/index",
+    "pages/educate/index"
   ],
   "tabBar": {
     "custom": true,
@@ -29,14 +31,19 @@
     "van-cell": "@vant/weapp/cell/index",
     "van-cell-group": "@vant/weapp/cell-group/index",
     "van-tabbar": "@vant/weapp/tabbar/index",
-    "van-tabbar-item": "@vant/weapp/tabbar-item/index"
+    "van-tabbar-item": "@vant/weapp/tabbar-item/index",
+    "van-toast": "@vant/weapp/toast/index",
+    "van-dialog": "@vant/weapp/dialog/index",
+    "van-notice-bar": "@vant/weapp/notice-bar/index",
+    "van-field": "@vant/weapp/field/index",
+    "van-tag": "@vant/weapp/tag/index",
+    "van-empty": "@vant/weapp/empty/index"
   },
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#187ef9",
     "navigationBarTitleText": "首页",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle":"white"
   },
-  "style": "v2",
   "sitemapLocation": "sitemap.json"
 }

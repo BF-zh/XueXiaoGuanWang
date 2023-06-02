@@ -1,4 +1,6 @@
 // pages/hoem/index.js
+import Dialog from '@vant/weapp/dialog/dialog';
+import Toast from '@vant/weapp/toast/toast';
 Page({
 
   /**
@@ -15,19 +17,24 @@ Page({
             text:"新生报道",
             prefix:true,
             icon:"check-in",
-            color:"#187ef9"
+            color:"#187ef9",
+            message:{
+              content:"该功能只向新生开放"
+            }
           },
           {
             text:"学费",
             prefix:false,
             icon:"refund-o",
-            color:"#ff5e5e"
+            color:"#ff5e5e",
+            url:"/pages/fee/index"
           },
           {
             text:"继教",
             prefix:false,
             icon:"paid",
-            color:"#ff9a4c"
+            color:"#ff9a4c",
+            url:"/pages/educate/index"
           },
           {
             text:"我的录取",
@@ -125,5 +132,24 @@ Page({
    */
   onShareAppMessage() {
 
+  },
+  handleClickItem({currentTarget}){
+    const {message,url} =currentTarget.dataset.item
+    if(message){
+      Dialog.alert({
+        message: message.content,
+      }).then(() => {
+        // on close
+      });
+    }
+    if(url){
+      wx.navigateTo({
+        url,
+        fail(){
+          Toast(`当前页面维护中`)
+        }
+      })
+    }
+    console.log(url,message);
   }
 })

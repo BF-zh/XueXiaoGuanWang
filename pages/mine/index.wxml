@@ -1,2 +1,28 @@
 <!--pages/mine/index.wxml-->
-<view class="bg"></view>
+<view class="common-bg"></view>
+<view class="flex items-center p-m gap-m header">
+  <van-image width="100" height="100" round src="https://img.yzcdn.cn/vant/cat.jpeg" />
+  <view style="flex:1;" class="">
+    <view class="flex items-center">
+      <text class="text-xl">北风</text>
+      <view class="flex gap-sm items-center px-m text-sm">
+        <van-icon name="bulb-o" dot />
+        <text>未识别</text>
+      </view>
+    </view>
+    <view class="py-sm">欢迎登陆皇家学院</view>
+    <view class="flex gap-m">
+      <view class="px-m py-sm radius-sm identity">
+        <van-icon name="qr" />
+        <text>实名身份码</text>
+      </view>
+     <view class="flex items-center p-sm border-sm radius-sm" style="--border-color:#fff;">
+        <van-icon name="envelop-o" />
+     </view>
+    </view>
+  </view>
+</view>
+<van-cell-group inset>
+<van-cell wx:for="{{list}}" wx:key="index" title="{{item.title}}" icon="{{item.icon}}" is-link data-item="{{item}}" bind:click="handleClickItem" />
+</van-cell-group>
+<van-toast id="van-toast" />

@@ -1,11 +1,49 @@
 // pages/mine/index.js
+import Toast from '@vant/weapp/toast/toast';
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    list:[
+      {
+        icon:"comment-o",
+        title:"消息订阅",
+        url:"",
+        message:""
+      },
+      {
+        icon:"shield-o",
+        title:"系统应用",
+        url:"",
+        message:""
+      },
+      {
+        icon:"edit",
+        title:"投诉建议",
+        url:"",
+        message:""
+      },
+      {
+        icon:"delete-o",
+        title:"清除缓存",
+        url:"",
+        message:""
+      },
+      {
+        icon:"upgrade",
+        title:"版本更新",
+        url:"",
+        message:"暂时没有可用更新"
+      },
+      {
+        icon:"warn-o",
+        title:"退出登陆",
+        url:"",
+        message:""
+      },
+    ]
   },
 
   /**
@@ -62,5 +100,16 @@ Page({
    */
   onShareAppMessage() {
 
+  },
+  handleClickItem({currentTarget}){
+    const {url,message} = currentTarget.dataset.item
+    if(url){
+      wx.navigateTo({
+        url
+      })
+    }
+    if(message){
+      Toast(message)
+    }
   }
 })
