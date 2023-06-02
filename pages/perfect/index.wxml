@@ -1,0 +1,22 @@
+<view class="common-bg" style="--h:200rpx" />
+<van-cell-group inset border="{{false}}">
+
+  <van-cell icon="user-o" size="large" title="基础信息" value="已完善">
+    <van-icon slot="right-icon"  name="arrow-down" />
+  </van-cell>
+</van-cell-group>
+<van-cell-group inset border="{{false}}" custom-class="cell-group">
+  <van-cell icon="debit-pay" size="large" title="银行卡号" value="已完善">
+    <van-icon slot="right-icon" name="arrow-down" />
+  </van-cell>
+</van-cell-group>
+<van-cell-group inset border="{{false}}" custom-class="cell-group">
+  <van-cell icon="phone-o" size="large" title="联系信息" value="已完善">
+    <van-icon slot="right-icon" name="arrow-down" />
+  </van-cell>
+</van-cell-group>
+<van-cell-group inset border="{{false}}" custom-class="cell-group">
+  <van-cell icon="friends-o" size="large" title="家庭信息" value="已完善">
+    <van-icon slot="right-icon" name="arrow-down" />
+  </van-cell>
+</van-cell-group>

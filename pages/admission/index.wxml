@@ -1,0 +1,18 @@
+<!--pages/Admission/index.wxml-->
+<van-cell-group inset custom-class="cell-group warp">
+  <van-cell label="录取状态：录取" title="薛慧（511**************868）" />
+  <van-cell label-class="label-class" label="录取方案 推普学院2021(9)-单招" />
+  <van-cell label-class="label-class" label="录取专业 软件技术(专科)" />
+  <van-cell label-class="label-class" label="EMS单号" >
+    <van-icon  slot="right-icon" name="description" />
+  </van-cell>
+  <van-cell>
+    <view slot="title" class="grid column-2 gap-m">
+      <van-button custom-class="custom-button" block size="small" plain type="primary">EMS收件地址</van-button>
+      <van-button custom-class="custom-button" block size="small" plain type="info">前往迎新</van-button>
+    </view>
+  </van-cell>
+  <view class="circle">
+    <text class="admitted">已录取</text>
+  </view>
+</van-cell-group>

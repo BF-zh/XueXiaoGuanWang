@@ -1,4 +1,6 @@
 // pages/manage/index.js
+import Dialog from '@vant/weapp/dialog/dialog';
+import Toast from '@vant/weapp/toast/toast';
 Page({
 
   /**
@@ -12,25 +14,33 @@ Page({
             text: "学费",
             prefix: false,
             icon: "refund-o",
-            color: "#ff5e5e"
+            color: "#ff5e5e",
+            url:"/pages/fee/index"
           },
           {
             text: "继教",
             prefix: false,
             icon: "paid",
-            color: "#ff9a4c"
+            color: "#ff9a4c",
+            url:"/pages/educate/index"
           },
           {
             text: "杂费",
             prefix: false,
             icon: "more-o",
-            color: "#187ef9"
+            color: "#187ef9",
+            message:{
+              content:"该功能维护中"
+            }
           },
           {
             text: "证书",
             prefix: true,
             icon: "zhengshu",
-            color: "#e341ff"
+            color: "#e341ff",
+            message:{
+              content:"该功能维护中"
+            }
           },
         ]
       },
@@ -41,37 +51,49 @@ Page({
             text: "我的录取",
             prefix: true,
             icon: "xueshengluqu",
-            color: "#57bf7f"
+            color: "#57bf7f",
+            url:'/pages/admission/index'
           },
           {
             text: "我的单招",
             prefix: true,
             icon: "gangbi",
-            color: "#ff5e5e"
+            color: "#ff5e5e",
+            url:"/pages/singlemove/index"
           },
           {
             text: "我要报名",
             prefix: true,
             icon: "xueshengbaoming",
-            color: "#1ebab5"
+            color: "#1ebab5",
+            message:{
+              content:"该功能维护中"
+            }
           },
           {
             text: "我的扩招",
             prefix: false,
             icon: "cluster-o",
-            color: "#70cf08"
+            color: "#70cf08",
+            message:{
+              content:"该功能维护中"
+            }
           },
           {
             text: "中职注册",
             prefix: true,
             icon: "zhuce",
-            color: "#8c53f7"
+            color: "#8c53f7",
+            message:{
+              content:"该功能维护中"
+            }
           },
           {
             text: "我的继教",
             prefix: false,
             icon: "records",
-            color: "#429bff"
+            color: "#429bff",
+            url:'/pages/educate/index'
           },
         ]
       },
@@ -82,13 +104,19 @@ Page({
             text: "毕业证书",
             prefix: true,
             icon: "xuewei",
-            color: "#ff4fc1"
+            color: "#ff4fc1",
+            message:{
+              content:"该功能维护中"
+            }
           },
           {
             text: "证书领取",
             prefix: false,
             icon: "records",
-            color: "#429bff"
+            color: "#429bff",
+            message:{
+              content:"该功能维护中"
+            }
           },
         ]
       },
@@ -99,7 +127,10 @@ Page({
             text: "新生报道",
             prefix: true,
             icon: "check-in",
-            color: "#187ef9"
+            color: "#187ef9",
+            message:{
+              content:"该功能维护中"
+            }
           },
 
         ]
@@ -112,37 +143,51 @@ Page({
             text: "完善资料",
             prefix: true,
             icon: "ziliaoku",
-            color: "#1ebab5"
+            color: "#1ebab5",
+            url:'/pages/perfect/index'
           },
           {
             text: "勤工俭学",
             prefix: false,
             icon: "gem-o",
-            color: "#ff4fc1"
+            color: "#ff4fc1",
+            url:'/pages/assistantship/index'
           },
           {
             text: "我的班级",
             prefix: true,
             icon: "banji",
-            color: "#ff5e5e"
+            color: "#ff5e5e",
+            message:{
+              content:"该功能维护中"
+            }
           },
           {
             text: "我的宿舍",
             prefix: true,
             icon: "sushe",
-            color: "#187ef9"
+            color: "#187ef9",
+            message:{
+              content:"该功能维护中"
+            }
           },
           {
             text: "教材领取",
             prefix: false,
             icon: "card",
-            color: "#57bf7f"
+            color: "#57bf7f",
+            message:{
+              content:"该功能维护中"
+            }
           },
           {
             text: "我的银行卡  ",
             prefix: true,
             icon: "shu",
-            color: "#ff5e5e"
+            color: "#ff5e5e",
+            message:{
+              content:"该功能维护中"
+            }
           },
         ]
       },
@@ -153,8 +198,11 @@ Page({
           text: "新生报道",
           prefix: false,
           icon: "printer",
-          color: "#187ef9"
-        }, ]
+          color: "#187ef9",
+          message:{
+            content:"该功能维护中"
+          }
+        },]
       },
     ]
   },
@@ -213,5 +261,24 @@ Page({
    */
   onShareAppMessage() {
 
+  },
+  handleClickItem({currentTarget}){
+    const {message,url} =currentTarget.dataset.item
+    if(message){
+      Dialog.alert({
+        message: message.content,
+      }).then(() => {
+        // on close
+      });
+    }
+    if(url){
+      wx.navigateTo({
+        url,
+        fail(){
+          Toast(`当前页面维护中`)
+        }
+      })
+    }
+    console.log(url,message);
   }
 })

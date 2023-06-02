@@ -40,7 +40,8 @@ Page({
             text:"我的录取",
             prefix:true,
             icon:"xueshengluqu",
-            color:"#57bf7f"
+            color:"#57bf7f",
+            url:"/pages/admission/index"
           },
         ]
       },
@@ -53,19 +54,22 @@ Page({
             text:"我的单招",
             prefix:true,
             icon:"gangbi",
-            color:"#ff5e5e"
+            color:"#ff5e5e",
+            url:'/pages/singlemove/index'
           },
           {
             text:"完善资料",
             prefix:true,
             icon:"ziliaoku",
-            color:"#1ebab5"
+            color:"#1ebab5",
+            url:'/pages/perfect/index'
           },
           {
             text:"勤工俭学",
             prefix:false,
             icon:"gem-o",
-            color:"#ff4fc1"
+            color:"#ff4fc1",
+            url:'/pages/assistantship/index'
           },
           {
             text:"杂费",

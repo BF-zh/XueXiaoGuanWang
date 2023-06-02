@@ -1,0 +1,2 @@
+<!--pages/assistantship/index.wxml-->
+<van-empty description="暂未查询到你的信息" />

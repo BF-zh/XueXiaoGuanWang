@@ -1,0 +1,41 @@
+/* pages/Admission/index.wxss */
+.label-class {
+  color: #000 !important;
+}
+
+.circle {
+  --border-width: 2px;
+  --bg: var(--success-color);
+  --size: 4em;
+  letter-spacing: 3px;
+  position: absolute;
+  right: 40rpx;
+  top: 100rpx;
+  font-size: x-small;
+  transform: rotate(-40deg);
+  color: var(--bg);
+  font-weight: 600;
+}
+
+.circle::after,
+.circle::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: -1;
+  width: var(--size);
+  height: var(--size);
+  transform: translate(-50%, -50%);
+  border-radius: var(--size);
+  border: var(--border-width) solid var(--bg);
+}
+.circle::before{
+  --size:2.5em;
+}
+
+.admitted {
+  padding: 1px 5px;
+  background-color: #fff;
+  border: var(--border-width) solid var(--bg);
+}

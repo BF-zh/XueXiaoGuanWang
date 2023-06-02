@@ -1,7 +1,8 @@
 <!--pages/manage/index.wxml-->
-<van-cell-group  wx:for="{{list}}" wx:key="index" title="{{item.title}}" inset="{{item.inset}}">
+<van-cell-group wx:for="{{list}}" wx:key="index" title="{{item.title}}" inset="{{item.inset}}">
   <van-grid custom-class="gird-warp" border="{{false}}" gutter="{{item.gutter}}">
-    <van-grid-item wx:for="{{item.item}}" wx:key="index" style="--c:{{item.color}}" icon-class="my-icon" icon-prefix="{{item.prefix?'icon':'van-icon'}}" icon="{{item.icon}}" text="{{item.text}}" />
+    <van-grid-item bind:click="handleClickItem" data-item="{{item}}" wx:for="{{item.item}}" wx:key="index" style="--c:{{item.color}}" icon-class="my-icon" icon-prefix="{{item.prefix?'icon':'van-icon'}}" icon="{{item.icon}}" text="{{item.text}}" />
   </van-grid>
-
 </van-cell-group>
+<van-dialog id="van-dialog" />
+<van-toast id="van-toast" />

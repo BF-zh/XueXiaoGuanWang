@@ -1,0 +1,7 @@
+<van-empty description="当前用户暂无单招信息">
+  <view class="text-xs flex column align-center gap-sm">
+    <view  style="color: var(--primary-color);" bindtap="handleShowMessage">查看说明</view>
+    <view>如果您由其他途径被本院校单招录取,请在【<text bindtap="handleToAdmission" data-url="/pages/admission/index" style="color: var(--primary-color);">我的录取</text>】应用中查看</view>
+  </view>
+</van-empty>
+<van-dialog id="van-dialog" confirm-button-color="var(--primary-color)" />

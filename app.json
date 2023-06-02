@@ -4,6 +4,10 @@
     "pages/manage/index",
     "pages/mine/index",
     "pages/fee/index",
+    "pages/singlemove/index",
+    "pages/admission/index",
+    "pages/assistantship/index",
+    "pages/perfect/index",
     "pages/educate/index"
   ],
   "tabBar": {

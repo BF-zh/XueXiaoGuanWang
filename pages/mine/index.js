@@ -29,7 +29,7 @@ Page({
         icon:"delete-o",
         title:"清除缓存",
         url:"",
-        message:""
+        message:"清除失败"
       },
       {
         icon:"upgrade",
@@ -41,7 +41,7 @@ Page({
         icon:"warn-o",
         title:"退出登陆",
         url:"",
-        message:""
+        message:"一个演示小程序，不能退出登录"
       },
     ]
   },

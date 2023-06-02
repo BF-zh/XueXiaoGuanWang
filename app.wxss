@@ -3,6 +3,7 @@
 
 page {
   --primary-color: #187ef9;
+  --success-color:#07c160;
   --page-bg: #f3f5f7;
   --content-bg: #fff;
   --md: 15px;
@@ -139,9 +140,27 @@ page {
 .grid {
   display: grid;
 }
+.grid.column-2{
+  grid-template-columns: repeat(2,1fr)
+}
+.grid.column-3{
+  grid-template-columns: repeat(3,1fr)
+}
 
 .flex {
   display: flex;
+}
+.column{
+  flex-direction: column;
+}
+.column-reverse{
+  flex-direction: column-reverse;
+}
+.row{
+  flex-direction: row;
+}
+.row-reverse{
+  flex-direction: row-reverse;
 }
 .flex-1{
   flex: 1;
