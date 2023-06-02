@@ -1,0 +1,32 @@
+/* pages/fee/index.wxss */
+.notice{
+  --notice-bar-height:25px;
+  border-radius: 9999px;
+}
+.tabs{
+  color: #8e96a4;
+  background-color: rgba(0, 0, 0, .1);
+  box-shadow: 1px 3px 3px 2px rgba(0, 0, 0, .1) inset;
+  position: relative;
+}
+.tabs .active{
+  color: #ffffff;
+}
+.tabs .active::after{
+  --w:33.33333%;
+  content: '';
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  top: 0;
+  width: var(--w);
+  border-radius: var(--md);
+  height: 100%;
+  background: var(--primary-color);
+}
+.bottom-btn{
+  position: absolute;
+  bottom: 10px;
+  box-sizing: border-box;
+  width: 100%;
+}

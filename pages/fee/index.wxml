@@ -1,0 +1,73 @@
+<view class="common-bg" style="--h:200rpx" />
+<van-cell-group inset border="{{false}}">
+  <van-notice-bar
+  custom-class="notice"
+  left-icon="info-o"
+  color="#fff"
+  background="rgba(255,255,255,.3)"
+  text="如果交易出现异常，【点击查看】解决办法"
+/>
+</van-cell-group>
+<van-cell-group inset custom-class="cell-group">
+  <van-field
+    label="姓名"
+    title-width="4em"
+    value="薛慧"
+    readonly
+    placeholder="请输入用户名"
+  />
+  <van-field
+    label="身份证"
+    title-width="4em"
+    value="511523************57"
+    readonly
+    placeholder="请输入用户名"
+  />
+  <van-field
+    label="学籍信息"
+    title-width="4em"
+    value="软件技术 (专科)"
+    readonly
+    placeholder="请输入用户名"
+  />
+  <van-field
+    label="缴费方式"
+    title-width="4em"
+    value="软件技术 (专科)"
+    readonly
+    placeholder="请输入用户名"
+  />
+</van-cell-group>
+<van-cell-group inset custom-class="cell-group">
+<view class="flex items-center justify-between tabs radius-md">
+  <view class="flex-1 align-center py-sm active" style="--w:33.333%">缴费学年</view>
+  <view class="flex-1 align-center py-sm" style="--w:66.666%">缴费类别</view>
+  <view class="flex-1 align-center py-sm" style="--w:100%">按年缴费</view>
+</view>
+</van-cell-group>
+<van-cell-group wx:for="{{list}}" wx:key="index" custom-class="cell-group" inset>
+  <van-cell use-label-slot size="large">
+    <view slot="title">
+      <view class="flex gap-m items-center">
+        <text>{{item.text}}</text>
+        <van-tag color="var(--primary-color)" round>已缴清</van-tag>
+      </view>
+    </view>
+    <view slot="label">
+      <view class="flex gap-m items-center">
+        <text>应缴金额</text>
+        <text style="color: #2c2c2d;">¥ {{item.price}}</text>
+      </view>
+    </view>
+  </van-cell>
+</van-cell-group>
+ <view style="background-color: #fff;" class="bottom-btn flex items-center p-m justify-between">
+   <view class="flex-1 align-center">
+    <van-icon name="cash-back-record" />
+     缴费记录
+   </view>
+   <view class="flex-1 align-center">
+    <van-icon name="balance-o" />
+     贷款记录
+   </view>
+ </view>

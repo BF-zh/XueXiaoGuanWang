@@ -1,0 +1,27 @@
+<view class="common-bg" style="--h:200rpx" />
+<van-cell-group inset border="{{false}}">
+  <van-notice-bar
+  custom-class="notice"
+  left-icon="info-o"
+  color="#fff"
+  background="rgba(255,255,255,.3)"
+  text="如果交易出现异常，【点击查看】解决办法"
+/>
+</van-cell-group>
+<van-cell-group inset custom-class="cell-group">
+  <van-field
+    label="姓名"
+    title-width="4em"
+    value="薛慧"
+    readonly
+    placeholder="请输入用户名"
+  />
+  <van-field
+    label="身份证"
+    title-width="4em"
+    value="511523************57"
+    readonly
+    placeholder="请输入用户名"
+  />
+</van-cell-group>
+<van-empty description="当前用户暂无继教缴费信息" />

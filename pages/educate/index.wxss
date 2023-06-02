@@ -1,0 +1,5 @@
+/* pages/educate/index.wxss */
+.notice{
+  --notice-bar-height:25px;
+  border-radius: 9999px;
+}
