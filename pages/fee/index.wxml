@@ -33,7 +33,7 @@
   <van-field
     label="缴费方式"
     title-width="4em"
-    value="软件技术 (专科)"
+    value="按年缴费"
     readonly
     placeholder="请输入用户名"
   />

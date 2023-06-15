@@ -75,10 +75,20 @@ Page({
             text:"杂费",
             prefix:false,
             icon:"more-o",
-            color:"#187ef9"
+            color:"#187ef9",
+            message:{
+              content:"该功能维护中"
+            }
           },
         ]
       }
+    ],
+    banner:[
+      "/static/images/love.png",
+      "/static/images/618.png",
+      "/static/images/dw.jpeg",
+      "/static/images/fqj.jpeg",
+      "/static/images/gaokao.png",
     ]
   },
 
